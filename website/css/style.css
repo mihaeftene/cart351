@@ -1,0 +1,312 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END OF MAYER'S CODE. Removes all of the default CSS styling of the web / browsers*/
+
+/*Start of my CSS */
+
+/*Fonts*/
+
+@font-face {
+	src: url('fonts/Guillon-Bold.ttf') format('truetype');
+	font-family: Guillion-Bold;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('fonts/Guillon-Light.ttf') format('truetype');
+	font-family: Guillion-Light;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*Start of the Website*/
+
+body {
+	background-color: white;
+}
+strong {
+	font-style: bold;
+}
+img {
+	width: 100%;
+}
+h1, h2, h3 {
+	font-family: Guillion-Bold;
+	font-weight: 700;
+	font-style: normal;
+}
+a {
+	text-decoration: none;
+}
+h4, h5 {
+	font-family: Guillion-Light;
+	font-weight: 300;
+	font-style: normal;
+}
+h3 {
+	text-transform: capitalize;
+	font-size: 35px;
+	padding: 0 0 1% 0;
+	color: #001833;
+	font-weight: 800;
+	line-height: 40px;
+}
+/*styling header*/
+
+header {
+	background: white;
+	background-size: cover;
+	background-position: center top;
+	width: 100%;
+}
+hr {
+	height: 0;
+	border: 0;
+	border-top: 1px solid #979797;
+}
+.intro {
+	width: 100%;
+	margin: 0 auto;
+	padding: 2% 0;
+}
+.intro h1 {
+	font-size: 6em;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 800;
+	line-height: 1.5em;
+}
+.intro h2 {
+	font-size: 2em;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	text-transform: capitalize;
+	letter-spacing: 0.09em;
+}
+/*styling about us"*/
+
+.wrapper {
+	max-width: 960px;
+	font-weight: 350;
+	margin: 0 auto;
+	font-family: Guillion-Light;
+	padding-bottom: 5%;
+	font-size: 17px;
+}
+.about {
+	padding: 4% 0;
+}
+.about p {
+	font-family: Guillion-Light;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.8;
+	color: #616569;
+	letter-spacing: .02em;
+	margin: 10px auto;
+	font-size: 23px;
+	padding: 1.5% 0;
+}
+.about p a {
+	color: #E1CCC9;
+	border-bottom: 2px solid;
+}
+/*styling Of Works */
+
+.work {
+	height: 300px;
+	padding: 2% 0;
+}
+.work h3 {
+	padding: 4% 0;
+}
+.text-box {
+	float: left;
+	text-align: left;
+	width: 480px;
+	background-color: #fff;
+	height: 100%;
+}
+.text-box-content {
+	padding: 9% 10%;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	letter-spacing: .03em;
+	font-family: Guillion-Light;
+	font-size: 21px;
+	margin: 0px;
+}
+li {
+	margin: 0px;
+	padding: 4px;
+	font-family: Guillion-Light;
+	color: black;
+	letter-spacing: .03em;
+	color: black;
+}
+ul li a:hover {
+	color: grey;
+}
+.image-area {
+	width: 480px;
+	height: 300px;
+	overflow: hidden;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+/*Styling footer*/
+
+footer {
+	background-color: white;
+	color: #fff;
+	padding: 1% 0;
+	width: 100%;
+	clear: both;
+	height: 100px;
+}
+.footer-content {
+	max-width: 960px;
+	padding: 1% 0;
+	margin: 0 auto;
+	font-family: Guillion-light;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.4;
+	color: black;
+	letter-spacing: .03em;
+	font-size: 1em;
+}
+.credit {
+	float: left;
+}
+.social {
+	float: right;
+}
+.social li {
+	display: inline;
+}
+.social li a {
+	color: black;
+	padding: 0.2em;
+	font-size: 1.8em;
+	font-weight: 300;
+	font-family: Guillion-light;
+}
+.social li a:hover {
+	color: grey;
+}
+/*media queries for the website*/
+
+	@media only screen and (max-width: 1000px) {
+		.wrapper {
+			padding: 0% 4%;
+		}
+		.work {
+			padding: 4% 0;
+		}
+		.image-area {
+			float: left;
+			width: 100%;
+			height: auto;
+		}
+		.text-box {
+			width: 100%;
+			height: auto;
+		}
+		.social li a {
+			font-size: 1.4em;
+		}
+		.footer-content {
+			padding: 3.5%;
+		}
+	}
+	@media only screen and (max-width:800px) {
+		.intro h1 {
+			font-size: 4em;
+			line-height: 1.2;
+		}
+		.intro h2 {
+			font-size: 1.8em;
+			padding-top: 3%;
+		}
+		.about p {
+			font-size: 1em;
+			line-height: 2;
+		}
+		footer {
+			height: 130px;
+			line-height: 1.3em;
+		}
+		.footer-content {
+			padding: 4%;
+			font-size: 14px;
+		}
+		.social {
+			float: left;
+		}
+		.social li a {
+			font-size: 1.3em;
+		}
+		.contact-content {
+			font-size: 12px;
+			line-height: 1.5;
+		}
+	}
