@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>EX 3: Json Load</title>
+  <script src="jquery/jquery-3.4.1.js"></script>
+  <script>
+    $(document).ready(function() {
+      let header = $('header');
+      let section = $('section');
+      let loaded = false;
+
+      $("#inputSearchVal").click(function(event) {
+
+        //console.log("you clicked");
+        $.getJSON('load/day.json', function(data) {
+            console.log(data);
+            populateHeader(data);
+            showDays(data);
+          })
+          .fail(function() {
+            console.log("error");
+          })
+      });
+
+      function populateHeader(data) {
+        $("#cleanData").empty();
+        let sampleHeader = $("<h1>");
+        $(sampleHeader).text(data.Label);
+        $(sampleHeader).appendTo(header);
+      }
+
+      function showDays(data) {
+        // array of each days
+        let searchVal = $('#getInput').val();
+        $("#placeForText").empty(); //The spot that we want to put our datas
+        searchVal = searchVal.toLowerCase();
+
+        //console.log(searchVal);
+        let days = data['Days'];
+        for (var i = 0; i < days.length; i++) {
+
+          let sampleDayArticle = $('<article>');
+          let sampleDayH2 = $('<h2>');
+          let ListAm = $("<p>");
+          let ListPm = $('<p>');
+
+          $(sampleDayH2).text(days[i].DayNumber);
+          $(sampleDayH2).appendTo(sampleDayArticle);
+
+          //SETTING OUR VARIABLES FOR AM TIME
+          if (searchVal === "am" || searchVal === "AM" || searchVal === "Am" || searchVal === "all" || searchVal === "ALL" || searchVal === "All") {
+            let amTime = days[i].am;
+            for (let Tasks = 0; Tasks < amTime.length; Tasks++) {
+              let listItem = $('<li>');
+              $(listItem).text(amTime[Tasks].name);
+              $(listItem).appendTo(ListAm);
+              $(ListAm).appendTo(sampleDayArticle);
+            }
+          }
+          //SETTING OUR VARIABLES FOR PM TIME
+          if (searchVal === "pm" || searchVal === "PM" || searchVal === "Pm" || searchVal === "all" || searchVal === "ALL" || searchVal === "All") {
+            let pmTime = days[i].pm;
+            for (let Tasks = 0; Tasks < pmTime.length; Tasks++) {
+              let listItem = $('<li>');
+              $(listItem).text(pmTime[Tasks].name);
+              $(listItem).appendTo(ListPm);
+            }
+            $(ListPm).appendTo(sampleDayArticle);
+          }
+          $(section).append(sampleDayArticle);
+        } //Days
+      } //function
+    });
+  </script>
+</head>
+
+<style>
+  html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+
+  body {
+    width: 100%;
+    background-color: #000000;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+
+  /* HEADER STYLING*/
+
+  h1 {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 20px;
+    margin-left: 7%;
+    color: white;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    padding: 5%;
+    text-transform: uppercase;
+    text-align: left;
+
+  }
+
+  section {
+    margin: 5%;
+    margin-top: 0;
+  }
+
+  /* STYLE SECTIONS */
+
+  section article {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 1%;
+    display: block;
+    float: left;
+  }
+
+  section p {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  /* STYLE LIST */
+  li {
+    list-style-type: none;
+    text-align: center;
+    margin: 5%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    color: white;
+    text-align: left;
+  }
+
+  .info {
+    color: white;
+    margin: 7%;
+    font-size: 20px;
+  }
+
+  .searchspace {
+    margin-top: 0;
+    margin-left: 5%;
+  }
+
+  #inputSearchVal {
+    background: white;
+    color: black;
+    border: none;
+    width: 100px;
+    margin: 2%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #getInput {
+    margin: 2%;
+    margin-top: 0;
+    margin-right: 0;
+  }
+</style>
+
+<body>
+  <div class="info">
+    <p>Type am or pm and you will see my schedule for all of these days </p>
+  </div>
+  <div class="searchspace">
+    <input type="text" id="getInput" name="" value="">
+    <input type="button" id="inputSearchVal" value="Load Data" />
+  </div>
+  <header id="cleanData">
+  </header>
+
+  <section id="placeForText">
+  </section>
+
+
+</body>
+
+</html>

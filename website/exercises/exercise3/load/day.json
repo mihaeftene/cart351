@@ -1,0 +1,113 @@
+{
+  "Label": "Check out My Mornings And Nights Schedule throughout the week",
+
+  "Days": [{
+      "DayNumber": "Monday",
+      "am": [{
+        "name": "Wake Up at 5AM"
+      }, {
+        "name": "Yoga at 5:30AM"
+      }, {
+        "name": "Breakfast at 6AM"
+      }, {
+        "name": "Studying from 6 to 12PM"
+      }],
+      "pm": [{
+        "name": "Taking Metro at 12:30PM"
+      }, {
+        "name": "Class from 2:30 until 5:30PM"
+      }, {
+        "name": "Taking Metro at 6PM"
+      }, {
+        "name": "Studying until 8PM"
+      }, {
+        "name": "bed time!"
+      }]
+    },
+    {
+      "DayNumber": "Tuesday",
+      "am": [{
+        "name": "Wake Up at 7AM"
+      }, {
+        "name": "Breakfast at 8AM"
+      }, {
+        "name": "Taking Metro at 9AM"
+      }],
+      "pm": [{
+        "name": "Work from 12 to 4PM"
+      }, {
+        "name": "Taking Metro at 4:30PM"
+      }, {
+        "name": "Studying until 8PM"
+      }, {
+        "name": "Facemask at 9PM"
+      }, {
+        "name": "bed time!"
+      }]
+    },
+    {
+      "DayNumber": "Wednesday",
+      "am": [{
+        "name": "Wake Up at 6:30AM"
+      }, {
+        "name": "Breakfast at 6:40AM"
+      }, {
+        "name": "Taking Metro at 9AM"
+      }, {
+        "name": "Classes from 8:30 to 12:30PM"
+      }],
+      "pm": [{
+        "name": "Work from 1 to 6PM"
+      }, {
+        "name": "Taking Metro at 6:30PM"
+      }, {
+        "name": "Studying until 10PM"
+      }, {
+        "name": "bed time!"
+      }]
+    },
+    {
+      "DayNumber": "Thursday",
+      "am": [{
+        "name": "Wake Up at 9:30AM"
+      }, {
+        "name": "Breakfast at 9:40AM"
+      }, {
+        "name": "Studying until 11:30AM"
+      }, {
+        "name": "Taking Metro at 12PM"
+      }],
+      "pm": [{
+        "name": "Classes from 1:30PM to 5:30PM"
+      }, {
+        "name": "Taking Metro at 5:50PM"
+      }, {
+        "name": "Studying until 10PM"
+      }, {
+        "name": "bed time!"
+      }]
+    },
+
+    {
+      "DayNumber": "Friday",
+      "am": [{
+        "name": "Wake Up at 6:30AM"
+      }, {
+        "name": "Breakfast at 6:40AM"
+      }, {
+        "name": "Taking Metro at 7:30PM"
+      }, {
+        "name": "Classes from 8:30AM until 12:30PM"
+      }],
+      "pm": [{
+        "name": "Taking Metro at 12:50PM"
+      }, {
+        "name": "Sleep until 10PM!"
+      }, {
+        "name": "Watch Movie"
+      }, {
+        "name": "Sleep More Until the next day"
+      }]
+    }
+  ]
+}
