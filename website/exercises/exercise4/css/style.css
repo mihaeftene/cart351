@@ -1,0 +1,60 @@
+html {
+  font-style: normal;
+  font-family: Arial;
+}
+
+/*Outside fields*/
+fieldset {
+  background-color: #ffeca1;
+  width: 20%;
+  color: #555;
+  margin: 0 auto;
+  margin-top: 2%;
+  border: 0px;
+}
+
+label {
+  display: inline-block;
+  width: 90%;
+  font-size: 13px;
+  font-weight: bold;
+  align: center;
+  margin-top: 1%;
+}
+
+textarea {
+  vertical-align: top;
+  width: 60%;
+  margin-left: 2%;
+}
+
+p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+}
+
+/*Styling results*/
+.messageSpam {
+  font-size: 19px;
+  text-align: center;
+  background-color: #ffeca1;
+  width: 40%;
+  color: #555;
+  margin: 0 auto;
+  border: 0px;
+  padding: 10px;
+}
+/*buttons styling*/
+#buttonS {
+  background-color: black;
+  color: #FFFF;
+  margin-left: 45%;
+  text-decoration: none;
+  border: none;
+  margin-top: 20px;
+  font-size: 13px;
+}
